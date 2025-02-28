@@ -1,182 +1,221 @@
-<!doctype html>
+<!-- -<!doctype html> -->
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
-      Universal Time Measurement/Management System (UTMS): Beyond timekeeping -
-      A new Paradigm for Measuring and Managing Time
+        Universal Time Measurement/Management System (UTMS): Beyond timekeeping -
+        A new Paradigm for Measuring and Managing Time
     </title>
     <style>
-      body {
-        font-family: Arial, sans-serif;
-        max-width: 800px;
-        margin: 40px auto;
-        padding: 20px;
-        line-height: 1.6;
-      }
-      h1,
-      h2 {
-        color: #333;
-      }
+        :root {
+            /* Colors */
+            --primary-color: #1565C0;
+            --secondary-color: #1E3A8A;
+            --accent-color: #29B6F6;
+            --red-accent-color: #FF6F61;
+            --background-color: #E3F2FD;
+            --text-color: #0D47A1;
+
+            /* Typography */
+            --font-family: 'Roboto', sans-serif;
+            --font-size-base: 1rem;
+            --font-size-lg: 1.125rem;
+            --font-size-xl: 1.25rem;
+
+            /* Spacing */
+            --spacing-md: 1rem;
+            --spacing-lg: 1.5rem;
+
+            /* Borders */
+            --border-radius: 0.375rem;
+        }
+
+        body {
+            font-family: var(--font-family);
+            background-color: var(--background-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: var(--container-max-width);
+            margin: auto;
+            padding: var(--spacing-lg);
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: var(--font-size-xl);
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            font-size: var(--font-size-lg);
+        }
+
+        p {
+            margin-bottom: var(--spacing-md);
+        }
     </style>
-  </head>
-  <body>
-    <h1>Rethinking Time: The Universal Time Measurement System (UTMS)</h1>
+</head>
 
-    <h2>The Problem: A Fragmented and Arbitrary Concept of Time</h2>
-    <p>
-      Time, as we commonly perceive it, is a patchwork of historical
-      conventions. From the irregular lengths of months to the arbitrary
-      divisions of hours and minutes, our timekeeping systems are rooted in
-      outdated traditions rather than fundamental principles. Scientific time
-      measurement relies on atomic clocks and SI units, yet everyday usage
-      remains tethered to a system that fails to scale dynamically across
-      contexts.
-    </p>
+<body>
+    <div class="container">
+        <h1>Rethinking Time: The Universal Time Measurement System (UTMS)</h1>
+        <h2>The Problem: A Fragmented and Arbitrary Concept of Time</h2>
+        <p>
+            Time, as we commonly perceive it, is a patchwork of historical
+            conventions. From the irregular lengths of months to the arbitrary
+            divisions of hours and minutes, our timekeeping systems are rooted in
+            outdated traditions rather than fundamental principles. Scientific time
+            measurement relies on atomic clocks and SI units, yet everyday usage
+            remains tethered to a system that fails to scale dynamically across
+            contexts.
+        </p>
 
-    <h3>Key Limitations of Current Timekeeping:</h3>
-    <ul>
-      <li>
-        <strong>Inconsistent Granularity:</strong> Conventional units (seconds,
-        minutes, hours) lack a coherent scaling mechanism.
-      </li>
-      <li>
-        <strong>Context Dependence:</strong> Scientific, astronomical, and
-        practical time formats exist in isolation, requiring conversions.
-      </li>
-      <li>
-        <strong>Limited Expressiveness:</strong> Uncertainty and precision in
-        time measurements are often neglected or poorly represented.
-      </li>
-      <li>
-        <strong>Human-Centric Arbitrary Anchors:</strong> Most time standards
-        are based on Earth-centric cycles, limiting their applicability in
-        scientific and interplanetary contexts.
-      </li>
-    </ul>
-
-    <h2>The UTMS Approach: A Unified, Logarithmic, and Context-Aware System</h2>
-    <p>
-      The Universal Time Measurement System (UTMS) introduces a rigorous yet
-      flexible model for time representation, designed to scale seamlessly
-      across disciplines, from high-precision physics to human-readable formats.
-    </p>
-
-    <h3>Core Innovations:</h3>
-    <ul>
-      <li>
-        <strong>Logarithmic Time Scaling:</strong>
+        <h3>Key Limitations of Current Timekeeping:</h3>
         <ul>
-          <li>
-            Enables measurement across vast timescales (from Planck time to
-            cosmic epochs) without arbitrary boundaries.
-          </li>
-          <li>
-            Provides intuitive and computationally efficient time
-            representation.
-          </li>
+            <li>
+                <strong>Inconsistent Granularity:</strong> Conventional units (seconds,
+                minutes, hours) lack a coherent scaling mechanism.
+            </li>
+            <li>
+                <strong>Context Dependence:</strong> Scientific, astronomical, and
+                practical time formats exist in isolation, requiring conversions.
+            </li>
+            <li>
+                <strong>Limited Expressiveness:</strong> Uncertainty and precision in
+                time measurements are often neglected or poorly represented.
+            </li>
+            <li>
+                <strong>Human-Centric Arbitrary Anchors:</strong> Most time standards
+                are based on Earth-centric cycles, limiting their applicability in
+                scientific and interplanetary contexts.
+            </li>
         </ul>
-      </li>
-      <li>
-        <strong>Anchor-Based Referencing:</strong>
-        <ul>
-          <li>
-            Users define meaningful reference points (e.g., "Now", epoch events,
-            scientific milestones).
-          </li>
-          <li>
-            Time values are expressed relative to these dynamically defined
-            anchors, allowing adaptable contextualization.
-          </li>
-        </ul>
-      </li>
-      <li>
-        <strong>Multi-Format Representations:</strong>
-        <ul>
-          <li>
-            Scientific Notation: Engineering-style notation with uncertainties
-            and significant digits.
-          </li>
-          <li>
-            Unit-Based Notation: Modular unit definitions balancing precision
-            and readability.
-          </li>
-          <li>
-            Calendar-Informed Conversions: Integrates with historical and
-            conventional time systems for interoperability.
-          </li>
-        </ul>
-      </li>
-      <li>
-        <strong>Uncertainty as a First-Class Property:</strong>
-        <ul>
-          <li>Explicit handling of absolute and relative uncertainties.</li>
-          <li>
-            Propagation of uncertainty across transformations ensures
-            precision-aware computations.
-          </li>
-        </ul>
-      </li>
-      <li>
-        <strong>Interoperability with Existing Standards:</strong>
-        <ul>
-          <li>
-            Designed to integrate with ISO 8601, Unix timestamps, and SI-based
-            atomic time.
-          </li>
-          <li>
-            Compatible with both computational and human-readable contexts,
-            ensuring usability across domains.
-          </li>
-        </ul>
-      </li>
-    </ul>
 
-    <h2>Why UTMS Matters</h2>
-    <ul>
-      <li>
-        <strong>For Scientists:</strong> A robust system that allows precise,
-        scalable, and uncertainty-aware time calculations.
-      </li>
-      <li>
-        <strong>For Developers:</strong> A flexible API and CLI for handling
-        time in ways that traditional systems fail to accommodate.
-      </li>
-      <li>
-        <strong>For Thinkers & Innovators:</strong> A reimagined temporal
-        framework that adapts to the evolving needs of a multi-planetary
-        civilization.
-      </li>
-    </ul>
+        <h2>The UTMS Approach: A Unified, Logarithmic, and Context-Aware System</h2>
+        <p>
+            The Universal Time Measurement System (UTMS) introduces a rigorous yet
+            flexible model for time representation, designed to scale seamlessly
+            across disciplines, from high-precision physics to human-readable formats.
+        </p>
 
-    <div class="cta">
-      <h2>Join the Initiative</h2>
-      <p>
-        UTMS is an open project, inviting collaboration from developers,
-        researchers, and systems thinkers. If you're interested in contributing
-        or integrating UTMS into your workflows, check out the resources below
-        and get involved.
-      </p>
-      <ul>
-        <li>
-          <a href="https://github.com/danielonsecurity/utms" target="_blank"
-            >GitHub Repository</a
-          >
-        </li>
-        <li>
-          <a href="https://utms.readthedocs.io" target="_blank"
-            >Technical Documentation (Placeholder)</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://github.com/danielonsecurity/utms/discussions"
-            target="_blank"
-            >Discussion & Contributions</a
-          >
-        </li>
-      </ul>
-    </div>
-  </body>
+        <h3>Core Innovations:</h3>
+        <ul>
+            <li>
+                <strong>Anchor-Based Referencing:</strong>
+                <ul>
+                    <li>
+                        Users define meaningful reference points (e.g., "Now", epoch events,
+                        scientific milestones).
+                    </li>
+                    <li>
+                        Time values are expressed relative to these dynamically defined
+                        anchors, allowing adaptable contextualization.
+                    </li>
+                </ul>
+            </li>
+            <li>
+
+                <strong>Multi-Format Representations:</strong>
+                <ul>
+                    <li>
+                        Scientific Notation: Engineering-style notation with uncertainties
+                        and significant digits.
+                    </li>
+                    <li>
+                        Unit-Based Notation: Modular unit definitions balancing precision
+                        and readability.
+                    </li>
+                    <li>
+                        Calendar-Informed Conversions: Integrates with historical and
+                        conventional time systems for interoperability.
+                    </li>
+                </ul>
+            </li>
+                <strong>Interoperability with Existing Standards:</strong>
+                <ul>
+                    <li>
+                        Designed to integrate with ISO 8601, Unix timestamps, and SI-based
+                        atomic time.
+                    </li>
+                    <li>
+                        Compatible with both computational and human-readable contexts,
+                        ensuring usability across domains.
+                    </li>
+                </ul>
+            </li>
+            <li>
+              <strong>Logarithmic Time Scaling:</strong>
+                <ul>
+                    <li>
+                        Enables measurement across vast timescales (from Planck time to
+                        cosmic epochs) without arbitrary boundaries.
+                    </li>
+                    <li>
+                        Provides intuitive and computationally efficient time
+                        representation.
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                <strong>Uncertainty as a First-Class Property:</strong>
+                <ul>
+                    <li>Explicit handling of absolute and relative uncertainties.</li>
+                    <li>
+                        Propagation of uncertainty across transformations ensures
+                        precision-aware computations.
+                    </li>
+                </ul>
+            </li>
+            <li>
+
+        </ul>
+
+        <h2>Why UTMS Matters</h2>
+        <ul>
+            <li>
+                <strong>For Scientists:</strong> A robust system that allows precise,
+                scalable, and uncertainty-aware time calculations.
+            </li>
+            <li>
+                <strong>For Developers:</strong> A flexible API and CLI for handling
+                time in ways that traditional systems fail to accommodate.
+            </li>
+            <li>
+                <strong>For Thinkers & Innovators:</strong> A reimagined temporal
+                framework that adapts to the evolving needs of a multi-planetary
+                civilization.
+            </li>
+        </ul>
+
+        <div class="cta">
+            <h2>Join the Initiative</h2>
+            <p>
+                UTMS is an open project, inviting collaboration from developers,
+                researchers, and systems thinkers. If you're interested in contributing
+                or integrating UTMS into your workflows, check out the resources below
+                and get involved.
+            </p>
+            <ul>
+                <li>
+                    <a href="https://github.com/danielonsecurity/utms" target="_blank">GitHub Repository</a>
+                </li>
+                <li>
+                    <a href="https://utms.readthedocs.io" target="_blank">Technical Documentation (Placeholder)</a>
+                </li>
+                <li>
+                    <a href="https://github.com/danielonsecurity/utms/discussions" target="_blank">Discussion &
+                        Contributions</a>
+                </li>
+            </ul>
+        </div>
+</body>
+
 </html>
