@@ -1,0 +1,7 @@
+baseURL = 'https://utms.io/'
+languageCode = 'en-us'
+title = 'Universal Time Modeling System (UTMS)'
+theme = "utms"
+enableRobotsTXT = true
+defaultContentLanguage = "en"
+
