@@ -91,194 +91,233 @@
 
   <body>
     <div class="container">
-      <h1>Rethinking Time: The Universal Time Measurement System (UTMS)</h1>
-      <h2>The Problem: A Fragmented and Arbitrary Concept of Time</h2>
+      <h1>Universal Time Modeling System (UTMS)</h1>
+      <h2>Time is Not a Number—It's a Program</h2>
       <p>
-        Time, as we commonly perceive it, is a patchwork of historical
-        conventions. From the irregular lengths of months to the arbitrary
-        divisions of hours and minutes, our timekeeping systems are rooted in
-        outdated traditions rather than fundamental principles. Scientific time
-        measurement relies on atomic clocks and SI units, yet everyday usage
-        remains tethered to a system that fails to scale dynamically across
-        contexts.
+        UTMS is a programmable, modular framework for modeling time, events,
+        habits, routines, interruptions, anchors, and measurements. It treats
+        time as an intelligent fabric, not a fixed scale. Built around Hy (Lisp
+        on Python), UTMS enables condition-based automation, relative
+        scheduling, probabilistic durations, and semantic representations of
+        time.
       </p>
 
-      <h3>Key Limitations of Current Timekeeping:</h3>
+      <h3>What UTMS Can Do</h3>
       <ul>
         <li>
-          <strong>Inconsistent Granularity:</strong> Conventional units
-          (seconds, minutes, hours) lack a coherent scaling mechanism.
+          Trigger automation with a single button press on an Arduino keypad.
         </li>
         <li>
-          <strong>Context Dependence:</strong> Scientific, astronomical, and
-          practical time formats exist in isolation, requiring conversions.
+          Track sleep, suspend your laptop, and log wake-up events with
+          meaningful names.
+        </li>
+        <li>Start music and open Emacs automatically when you begin coding.</li>
+        <li>
+          Chain events (e.g., “end sleep” → “start morning routine” → “load AI
+          prompt”).
         </li>
         <li>
-          <strong>Limited Expressiveness:</strong> Uncertainty and precision in
-          time measurements are often neglected or poorly represented.
+          Model time in relative, fuzzy, or conditional forms (“30m after
+          sunrise”, “if rainy”).
         </li>
+        <li>Run programmable time logic with full Lisp expressiveness.</li>
         <li>
-          <strong>Human-Centric Arbitrary Anchors:</strong> Most time standards
-          are based on Earth-centric cycles, limiting their applicability in
-          scientific and interplanetary contexts.
+          Reflect, analyze, and act on your life through programmable time
+          agents.
         </li>
       </ul>
 
-      <h2>
-        The UTMS Approach: A Unified, Logarithmic, and Context-Aware System
-      </h2>
-      <p>
-        The Universal Time Measurement System (UTMS) introduces a rigorous yet
-        flexible model for time representation, designed to scale seamlessly
-        across disciplines, from high-precision physics to human-readable
-        formats.
-      </p>
-
-      <h3>Core Innovations:</h3>
+      <h2>Architecture Overview</h2>
       <ul>
         <li>
-          <strong>Anchor-Based Referencing:</strong>
-          <ul>
-            <li>
-              Users define meaningful reference points (e.g., "Now", epoch
-              events, scientific milestones).
-            </li>
-            <li>
-              Time values are expressed relative to these dynamically defined
-              anchors, allowing adaptable contextualization.
-            </li>
-          </ul>
+          <strong>🧠 Core:</strong> Programmable entities (events, anchors,
+          units, etc.) in Hy
         </li>
         <li>
-          <strong>Multi-Format Representations:</strong>
-          <ul>
-            <li>
-              Scientific Notation: Engineering-style notation with uncertainties
-              and significant digits.
-            </li>
-            <li>
-              Unit-Based Notation: Modular unit definitions balancing precision
-              and readability.
-            </li>
-            <li>
-              Calendar-Informed Conversions: Integrates with historical and
-              conventional time systems for interoperability.
-            </li>
-          </ul>
+          <strong>⌨️ CLI:</strong> For low-level interaction and scripting
         </li>
         <li>
-          <strong>Interoperability with Existing Standards:</strong>
-          <ul>
-            <li>
-              Designed to integrate with ISO 8601, Unix timestamps, and SI-based
-              atomic time.
-            </li>
-            <li>
-              Compatible with both computational and human-readable contexts,
-              ensuring usability across domains.
-            </li>
-          </ul>
+          <strong>🌐 Web API:</strong> Serves time data and logic to UI & other
+          systems
         </li>
         <li>
-          <strong>Logarithmic Time Scaling:</strong>
-          <ul>
-            <li>
-              Enables measurement across vast timescales (from Planck time to
-              cosmic epochs) without arbitrary boundaries.
-            </li>
-            <li>
-              Provides intuitive and computationally efficient time
-              representation.
-            </li>
-          </ul>
+          <strong>🖥️ Web UI:</strong> Frontend for interacting with UTMS
+          visually (in progress)
         </li>
         <li>
-          <strong>Uncertainty as a First-Class Property:</strong>
-          <ul>
-            <li>Explicit handling of absolute and relative uncertainties.</li>
-            <li>
-              Propagation of uncertainty across transformations ensures
-              precision-aware computations.
-            </li>
-          </ul>
+          <strong>📟 Arduino:</strong> External inputs via keypad and sensors
+          for physical logging
         </li>
       </ul>
 
-      <h2>Visual Representation of UTMS Features</h2>
+      <h2>Key Features</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Hy-based time DSL</td>
+            <td>✅ Stable</td>
+          </tr>
+          <tr>
+            <td>Arbitrary time units</td>
+            <td>✅ Working</td>
+          </tr>
+          <tr>
+            <td>Relative + absolute modeling</td>
+            <td>✅ Working</td>
+          </tr>
+          <tr>
+            <td>Conditional activation</td>
+            <td>✅ Working</td>
+          </tr>
+          <tr>
+            <td>Persistent entity storage</td>
+            <td>🟡 Partial</td>
+          </tr>
+          <tr>
+            <td>Web API</td>
+            <td>🟡 In progress</td>
+          </tr>
+          <tr>
+            <td>Web UI</td>
+            <td>🟡 Early dev</td>
+          </tr>
+          <tr>
+            <td>Arduino integration</td>
+            <td>🟡 Prototyped</td>
+          </tr>
+          <tr>
+            <td>Entity macros</td>
+            <td>🔜 Planned</td>
+          </tr>
+          <tr>
+            <td>Probabilistic durations</td>
+            <td>🔜 Planned</td>
+          </tr>
+          <tr>
+            <td>Multi-threaded timelines</td>
+            <td>🔜 Planned</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Visual Showcase</h2>
+      <p>UTMS is visual, programmable, and semantic. Here's a preview:</p>
+
+      <img src="images/arduino-setup.jpeg" alt="Arduino UTMS Setup" />
+      <p class="image-caption">
+        Physical logging with Arduino: UTMS via keypad, LCD, and sensors.
+      </p>
+
+      <img src="images/activities.png" alt="Activities Interface" />
+      <p class="image-caption">
+        Tracking activities with contextual categories and timestamps.
+      </p>
+
       <img src="images/variables.jpeg" alt="Variables in UTMS" />
       <p class="image-caption">
-        An example of variables in UTMS for flexible time management.
+        Named variables for semantic and programmable time logic.
       </p>
 
       <img src="images/units.jpeg" alt="Units in UTMS" />
       <p class="image-caption">
-        Various units used in UTMS for scalable time representation.
+        Define your own time units—days, cycles, moods, anything.
+      </p>
+
+      <img src="images/clocks.png" alt="Custom Clocks" />
+      <p class="image-caption">
+        Custom visual clocks for situational or symbolic tracking.
       </p>
 
       <img src="images/time_entities.jpeg" alt="Time Entities in UTMS" />
       <p class="image-caption">
-        Time entities and their relationships within UTMS.
-      </p>
-
-      <img src="images/tasks.jpeg" alt="Task Management in UTMS" />
-      <p class="image-caption">
-        Managing tasks and their time dependencies in UTMS.
+        Time entities: tasks, habits, events, anchors, measurements.
       </p>
 
       <img src="images/entities.jpeg" alt="Entities in UTMS" />
       <p class="image-caption">
-        The diverse entities within UTMS and their dynamic properties.
+        Flexible, programmable entities with hierarchical composition.
       </p>
 
-      <img src="images/editor.jpeg" alt="UTMS Editor Interface" />
+      <img src="images/tasks.jpeg" alt="Task Management in UTMS" />
       <p class="image-caption">
-        The UTMS editor interface for seamless time management.
+        Tracking tasks with planned/actual duration and conditions.
       </p>
 
       <img src="images/anchors.jpeg" alt="Anchors in UTMS" />
       <p class="image-caption">
-        Anchors in UTMS for setting reference points in time.
+        Anchors as meaningful reference points: “wake”, “sunset”, “restart”.
       </p>
 
-      <h2>Why UTMS Matters</h2>
-      <ul>
-        <li>
-          <strong>For Scientists:</strong> A robust system that allows precise,
-          scalable, and uncertainty-aware time calculations.
-        </li>
-        <li>
-          <strong>For Developers:</strong> A flexible API and CLI for handling
-          time in ways that traditional systems fail to accommodate.
-        </li>
-        <strong>For Thinkers & Innovators:</strong>
-        A reimagined temporal framework that adapts to the evolving needs of a
-        multi-planetary civilization.
-      </ul>
+      <img src="images/editor.jpeg" alt="UTMS Editor Interface" />
+      <p class="image-caption">
+        Web-based editor for interactive time modeling (WIP).
+      </p>
 
+      <img src="images/binary-habits.png" alt="Binary Habit Tracker" />
+      <p class="image-caption">
+        Binary habit tracking with time-stamped completion events.
+      </p>
+
+      <img src="images/mood-tracker.png" alt="Mood Tracker" />
+      <p class="image-caption">
+        Logging mood across time to correlate with tasks and interruptions.
+      </p>
+
+      <img src="images/metric-tracker-charts.png" alt="Metric Tracker" />
+      <p class="image-caption">
+        Charting arbitrary metrics over time: health, productivity, etc.
+      </p>
+
+      <img
+        src="images/public-transportation.png"
+        alt="Transportation Tracking"
+      />
+      <p class="image-caption">
+        Tracking commutes and transportation events with conditional logic.
+      </p>
+
+      <img src="images/weather.png" alt="Weather-Driven Logic" />
+      <p class="image-caption">
+        Integrating weather conditions into scheduling and predictions.
+      </p>
+
+      <h2>Get Involved</h2>
       <div class="cta">
-        <h2>Join the Initiative</h2>
         <p>
-          UTMS is an open project, inviting collaboration from developers,
-          researchers, and systems thinkers. If you're interested in
-          contributing or integrating UTMS into your workflows, check out the
-          resources below and get involved.
+          UTMS is under active development and looking for collaborators. We're
+          building a new paradigm for time—one programmable second at a time.
         </p>
         <ul>
           <li>
             <a href="https://github.com/danielonsecurity/utms" target="_blank"
-              >GitHub Repository</a
+              >Core Repository</a
             >
           </li>
           <li>
-            <a href="https://utms.readthedocs.io" target="_blank"
-              >Technical Documentation (Placeholder)</a
+            <a
+              href="https://github.com/danielonsecurity/utms-frontend"
+              target="_blank"
+              >Frontend</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://github.com/danielonsecurity/utms-hardware"
+              target="_blank"
+              >Arduino Integrations</a
             >
           </li>
           <li>
             <a
               href="https://github.com/danielonsecurity/utms/discussions"
               target="_blank"
-              >Discussion & Contributions</a
+              >Join the Conversation</a
             >
           </li>
         </ul>
